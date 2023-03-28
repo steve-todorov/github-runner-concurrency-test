@@ -26,5 +26,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo "Hello, world!" >> /tmp/${{ github.workspace }}.log
+        run: |
+          sleep 60
+          echo "Hello, world!" >> /tmp/${{ github.workflow }}.log
 
